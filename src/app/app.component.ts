@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'playground';
+
+  constructor() {
+    this.printName('John')
+  }
+
+  printName = (name: string) => {
+    console.log('Hey: ', name);
+  }
 }
