@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+  }
+  .nav-tree {
+    width: 30%;
+  }
+  .details {
+    width: 70%;
+  }
+  

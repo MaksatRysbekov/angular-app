@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+export interface Person {
+  name: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,12 +11,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'playground';
+  person: Person = {name:''};
 
   constructor() {
-    this.printName('John')
+    this.printName(this.person, 'John')
   }
 
-  printName = (name: string) => {
-    console.log('Hey: ', name);
+  printName = (person: Person, name: string) => {
+    person.name = name
+    console.log('Hey: ', person);
   }
 }

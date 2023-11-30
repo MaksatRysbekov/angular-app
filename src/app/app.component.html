@@ -1,1 +1,9 @@
-<h2>{{title}}</h2>
+<div class="main-container">
+    <app-filter (filterChanged)="onFilterChanged($event)"></app-filter>
+    
+    <div class="content-container">
+      <app-tree (selectionChanged)="onTreeSelectionChanged($event)"></app-tree>
+      <app-details [selectedNode]="selectedTreeNode"></app-details>
+    </div>
+  </div>
+  
